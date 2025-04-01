@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        html{
+            background-image: url(bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+            div{
+                background-color: rgb(39, 39, 39);
+                width: 500px;
+                height: 500px;
+                border-radius: 20px;
+                background-blend-mode: color-burn;
+            }
+            input{
+                outline-color: azure;
+                background-color: rgb(39, 39, 39);
+                color:white;
+                width: 400px;
+                border-radius: 5px;
+                
+            }
+            input::hover{
+                color:blueviolet;
+                border-color: blueviolet;
+                border-style: solid;
+            }
+            h1 {
+                color:aliceblue;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            p {
+                color:aliceblue;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            @-webkit-keyframes fadeIn {
+            from {
+            opacity: 0;
+            }
+            
+            to {
+            opacity: 1;
+            }
+            }
+            @keyframes fadeIn {
+            from {
+            opacity: 0;
+            }
+            
+            to {
+            opacity: 1;
+            }
+            }
+            .animate__fadeIn {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+            animation-duration: 3s;
+            -webkit-animation-duration: 3s;
+            animation-iteration-count: 1;
+            -webkit-animation-iteration-count: 1;
+            }
+            
+            @-webkit-keyframes fadeInUp {
+            from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+            }
+            
+            to {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            }
+            }
+            @keyframes fadeInUp {
+            from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+            }
+            
+            to {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            }
+            }
+            .animate__fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+            animation-duration: 7s;
+            -webkit-animation-duration: 7s;
+            animation-iteration-count: 1;
+            -webkit-animation-iteration-count: 1;
+            }
+            
+
+        </style>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Login page</title>
+        <script>
+        function user(){
+
+            var usr = document.getElementById('un').value
+            var pw = document.getElementById('pw').value
+            
+    if(usr === "talha" && pw === "meawmeaw")
+        window.location = "users/user1.html";
+    if(usr === "muzamil" && pw === "itachi")
+        window.location = "users/user2.html";
+        else
+        alert("incorrect username or password")
+}
+        </script>
+    </head>
+    <body>
+        
+        <center>
+            <br><br>
+            <div class="animate__fadeIn"><br><br><br>
+                <h1 class="animate__fadeInUp">Login here</h1> 
+                <p class="animate__fadeInUp">Enter username and password and<br>then press enter to submit</p>
+                <br><br>
+                <input class="animate__fadeInUp" type="un" name="un" id="un" value="" placeholder="username" />
+                <br><br>
+            <form onsubmit="user();return false">
+        <input class="animate__fadeInUp" type="password" name="pw" id="pw" value="" placeholder="password" />
+            </div>
+        </center>
+        
+    
+    </body>
+</html>
